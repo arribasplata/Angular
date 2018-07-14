@@ -1,0 +1,35 @@
+<div class="col-12" *ngIf="lista.length > 0; else noHayTareas">
+
+    <table class="table">
+
+      <thead>
+        <tr>
+          <th>
+            Tus tareas
+          </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let user of lista; let indice = index">
+          <td>
+            <input type="checkbox">
+            {{user}}
+          </td>
+          <td>
+            <button class="btn btn-danger btn-large" (click)="borrarUsuario(indice)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+
+
+    </table>
+
+  </div>
+
+  <ng-template #noHayTareas>
+    <hr>
+    <br>
+    <h6 class="text-center">No tienes tareas para hoy, ¡disfruta tu día! :)</h6>
+    <br>
+  </ng-template>

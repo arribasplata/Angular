@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<div class="col-xs-12">
+  <div class="container box-app" style="max-width:580px">
+    <br>
+      <h3>Hola, que tengas un buen día hoy.</h3>
+    <hr>
+
+    <div class="row">
+      <div class="col-12">
+          <app-formulario (onNuevo)="agregar($event)"></app-formulario>
+      </div>
+      
+    </div>
+
+    <app-listado [lista]="listaUsuarios" (onBorrar)="borrarUsuario($event)"></app-listado>
+
+  </div>
+
+</div>
